@@ -10,7 +10,7 @@ public class OpenHVRManager : MonoBehaviour
 {
     [Header("OpenHVR Server Connection")]
     public ConnectionType connectionType;
-    public string connectionURI = "http://localhost:8080/v1";
+    public string connectionURI = "http://127.0.0.1:47023/v1";
 
     [Header("Configuration")]
     [Tooltip("Outputs debug messages to the console.")]
