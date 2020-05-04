@@ -71,6 +71,8 @@ public class OpenHVRManager : MonoBehaviour
     }
 
     void Start() {
+        onServerReady += Ready;
+
         if (connectionType == ConnectionType.MQTT) {
             Debug.LogError("MQTT is not implemented yet.");
         }
@@ -82,6 +84,7 @@ public class OpenHVRManager : MonoBehaviour
                 if (debugMode) {
                     Debug.Log("OpenHVR server at " + connectionURI + " is ready.");
                 }
+                CancelAllEffects();
             }
         });
     }
@@ -97,6 +100,10 @@ public class OpenHVRManager : MonoBehaviour
             }
             result(ok);
         }));
+    }
+
+    public void Ready() {
+        Debug.Log("we're ready");
     }
 
     public void GetAllDevices(Action<Device[]> resultDevices) {
@@ -120,6 +127,11 @@ public class OpenHVRManager : MonoBehaviour
         var req = StartCoroutine(Put(url, payload, result => {
             callback(result.responseCode >= 200 && result.responseCode < 300);
         }));
+    }
+
+    public void CancelAllEffects() {
+        var url = "/effects/";
+        var req = StartCoroutine(Get(url, result => { }, "DELETE"));
     }
 
     public IEnumerator Get(string resource, System.Action<UnityWebRequest> result, string method = "GET") {

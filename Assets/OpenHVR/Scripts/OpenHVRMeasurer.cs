@@ -55,10 +55,10 @@ public class OpenHVRMeasurer : OpenHVRBehaviour {
             if (!onlyPosition) {
                 selectionLabel.text = availableDevices[selectedDevice].Name;
             }
-            positionLabel.text = trackedUsing.position.ToString();
-            positionLabel.transform.LookAt(faceLabelsTo);
-            selectionLabel.transform.LookAt(faceLabelsTo);
         }
+        positionLabel.text = trackedUsing.position.ToString();
+        positionLabel.transform.LookAt(faceLabelsTo);
+        selectionLabel.transform.LookAt(faceLabelsTo);
     }
 
     void ChangeLabelColor(Color color) {
