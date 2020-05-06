@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
 [HelpURL("http://github.com/mmajko/openhvr")]
 [AddComponentMenu("OpenHVR/Devices Enumerator")]
 public class OpenHVRDevices : OpenHVRBehaviour {
     public GameObject devicePrefab;
+    public Action<OpenHVRManager.Device[]> onDevicesLoaded;
 
     public class DeviceProperties : MonoBehaviour {
         public int id;
@@ -23,17 +25,20 @@ public class OpenHVRDevices : OpenHVRBehaviour {
         }
 
         manager.GetAllDevices(devices => {
-            Debug.Log("Loaded " + devices.Length.ToString() + " devices.");
+            onDevicesLoaded?.Invoke(devices);
             foreach (var device in devices) {
-                var node = Instantiate(devicePrefab, device.Location, device.Rotation, transform);
-                node.name = device.Name + " (ID" + device.Id + ")";
+                if (devicePrefab != null)
+                {
+                    var node = Instantiate(devicePrefab, device.Location, device.Rotation, transform);
+                    node.name = device.Name + " (ID" + device.Id + ")";
 
-                node.AddComponent<DeviceProperties>();
-                var properties = node.GetComponent<DeviceProperties>();
-                properties.id = device.Id;
-                properties.effectType = (OpenHVRManager.EffectType)device.EffectType;
-                properties.type = device.Type;
-                properties.connectionURI = device.ConnectorUri;
+                    node.AddComponent<DeviceProperties>();
+                    var properties = node.GetComponent<DeviceProperties>();
+                    properties.id = device.Id;
+                    properties.effectType = (OpenHVRManager.EffectType)device.EffectType;
+                    properties.type = device.Type;
+                    properties.connectionURI = device.ConnectorUri;
+                }
             }
         });
     }

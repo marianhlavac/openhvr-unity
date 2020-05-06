@@ -8,12 +8,12 @@ using System.Text;
 public class OpenHVRMeasurer : OpenHVRBehaviour {
     [Header("Input Configuration")]
     public Transform trackedUsing;
-    public Transform faceLabelsTo;
     public string switchDevicesAxisInput = "Horizontal";
     public string saveDeviceLocationInput = "Submit";
 
     private TextMesh selectionLabel;
     private TextMesh positionLabel;
+    private Transform faceLabelsTo;
     private OpenHVRManager.Device[] availableDevices = new OpenHVRManager.Device[0];
     private int selectedDevice = 0;
     private bool debounceDeviceSel = true;
@@ -29,6 +29,8 @@ public class OpenHVRMeasurer : OpenHVRBehaviour {
 
         selectionLabel = transform.Find("Selection Label").GetComponent<TextMesh>();
         positionLabel = transform.Find("Position Label").GetComponent<TextMesh>();
+        var camera = GameObject.FindGameObjectWithTag("MainCamera");
+        faceLabelsTo = camera.transform;
     }
 
     void Update() {
