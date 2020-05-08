@@ -1,7 +1,8 @@
-﻿using System.Linq;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
-using UnityEngine.iOS;
+using UnityEngine.UI;
 
 public class DirectionTestScenarioBehaviour : MonoBehaviour
 {
@@ -10,11 +11,13 @@ public class DirectionTestScenarioBehaviour : MonoBehaviour
     public OpenHVREffect dynamicEffect;
     public AudioSource music;
     public Transform userHand;
-    public Transform userHead;
+    public string resultsOutputDirectory;
+    public Text subjectName;
 
     private OpenHVRManager.Device[] devices;
     private int position = -1;
     private bool awaitsTrigger = false;
+    private List<Tuple<Vector3, Vector3, string>> measurements = new List<Tuple<Vector3, Vector3, string>>();
     void Start() {
         instructionTextLabel.text = "Čekej, načítám...";
         devicesEnumerator.onDevicesLoaded += BeginScenario;
@@ -36,14 +39,27 @@ public class DirectionTestScenarioBehaviour : MonoBehaviour
     }
 
     private void SpinupNext() {
+        if (position + 1 >= devices.Length)
+        {
+            instructionTextLabel.text = "Test je hotov!";
+            StoreResults();
+            return;
+        }
+
         var device = devices[++position];
+        if (device.EffectType != (int)OpenHVRManager.EffectType.Wind)
+        {
+            SpinupNext();
+            return;
+        }
+
         dynamicEffect.transform.position = device.Location;
         dynamicEffect.transform.rotation = device.Rotation;
         dynamicEffect.Play();
         music.Play();
 
         instructionTextLabel.text = "Chvilku čekej";
-        Invoke("AwaitInteraction", 10f);
+        Invoke("AwaitInteraction", 12f);
     }
 
     private void AwaitInteraction()
@@ -55,24 +71,33 @@ public class DirectionTestScenarioBehaviour : MonoBehaviour
     private void SaveResults()
     {
         var device = devices[position];
-        var realDirection = (device.Location - userHead.position).normalized;
+        var realDirection = (device.Location - userHand.position).normalized;
         var reportedDirection = userHand.forward;
-
-        Debug.Log(reportedDirection);
-        Debug.Log(realDirection);
-        Debug.Log((realDirection - reportedDirection).magnitude);
+        measurements.Add(Tuple.Create(realDirection, reportedDirection, device.Name));
     }
 
     private void PrepareForNextFan()
     {
         dynamicEffect.Cancel();
         music.Stop();
-        if (position + 1 >= devices.Length)
-        {
-            instructionTextLabel.text = "Test je hotov!";
-            return;
-        }
         instructionTextLabel.text = "Ok!";
-        Invoke("SpinupNext", 10f);
+        Invoke("SpinupNext", 3f);
+    }
+
+    private void StoreResults()
+    {
+        string filename = "results-" + subjectName.text + "-direction-" + DateTime.Now.ToFileTime() + ".csv";
+        Debug.Log("Saving results to " + filename);
+        using (StreamWriter sw = File.AppendText(Path.Combine(resultsOutputDirectory, filename)))
+        {
+            sw.WriteLine("devicename;real;reported;difference");
+            foreach ((Vector3 real, Vector3 reported, string deviceName) in measurements)
+            {
+                sw.Write(deviceName + ";");
+                sw.Write(real.ToString() + ";");
+                sw.Write(reported.ToString() + ";");
+                sw.WriteLine((reported - real).magnitude.ToString());
+            }
+        }
     }
 }

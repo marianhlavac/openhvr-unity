@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActuTestScenarioBehaviour : MonoBehaviour
 {
     public TextMesh instructionTextLabel;
     public OpenHVREffect effect;
     public AudioSource music;
+    public string resultsOutputDirectory;
+    public Text subjectName;
 
     private const int totalTests = 5;
 
@@ -44,7 +47,7 @@ public class ActuTestScenarioBehaviour : MonoBehaviour
             else
             {
                 instructionTextLabel.text = "Test hotov! Prům. " + Math.Round(measurements.Sum() / (double)totalTests / 1000, 1) + "s";
-
+                StoreResults();
             }
             awaits = 0;
             debounceTrigger = false;
@@ -83,5 +86,19 @@ public class ActuTestScenarioBehaviour : MonoBehaviour
         stopwatch.Reset();
 
         UnityEngine.Debug.Log(elapsed);
+    }
+
+    private void StoreResults()
+    {
+        string filename = "results-" + subjectName.text + "-actuation-" + DateTime.Now.ToFileTime() + ".csv";
+        UnityEngine.Debug.Log("Saving results to " + filename);
+        using (StreamWriter sw = File.AppendText(Path.Combine(resultsOutputDirectory, filename)))
+        {
+            sw.WriteLine("measurements;min;max;mean");
+            sw.Write(String.Join(",", measurements));
+            sw.Write(";" + measurements.Min().ToString());
+            sw.Write(";" + measurements.Max().ToString());
+            sw.Write(";" + (measurements.Sum() / totalTests).ToString());
+        }
     }
 }
