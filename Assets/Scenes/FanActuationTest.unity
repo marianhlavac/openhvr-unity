@@ -543,7 +543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -533.2, y: 554.8}
+  m_AnchoredPosition: {x: -546.19995, y: 168.70001}
   m_SizeDelta: {x: 263.3982, y: 41.3313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368870023
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 2
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   instructionTextLabel: {fileID: 1297457151}
   effect: {fileID: 1563618878}
   music: {fileID: 289405904}
-  resultsOutputDirectory: C:\Users\Marian\Desktop
+  resultsOutputDirectory: C:\Users\user\Desktop
   subjectName: {fileID: 1271316949}
 --- !u!1 &1172163150
 GameObject:
@@ -1491,7 +1491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524, y: 603.1}
+  m_AnchoredPosition: {x: -537, y: 217}
   m_SizeDelta: {x: 281.79306, y: 33.44696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1277720734
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 60
   effectType: 2
-  range: 1
+  range: 0.32
   directional: 0
   playOnAwake: 0
 --- !u!4 &1563618879
@@ -1670,7 +1670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563618877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.82, y: 1.48, z: 1.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

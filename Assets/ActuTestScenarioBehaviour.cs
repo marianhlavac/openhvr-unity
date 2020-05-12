@@ -14,7 +14,7 @@ public class ActuTestScenarioBehaviour : MonoBehaviour
     public string resultsOutputDirectory;
     public Text subjectName;
 
-    private const int totalTests = 5;
+    private const int totalTests = 4;
 
     private int awaits = 0;
     private int tests = 0;
@@ -59,7 +59,7 @@ public class ActuTestScenarioBehaviour : MonoBehaviour
     public void Delay()
     {
         instructionTextLabel.text = "Moment...";
-        Invoke("WaitForUser", 12f);
+        Invoke("WaitForUser", 4f);
     }
 
     public void WaitForUser()

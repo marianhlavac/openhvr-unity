@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 6640177000523413395}
   - component: {fileID: 9171139047483067856}
   - component: {fileID: 784089552882528146}
+  - component: {fileID: 2440457489429518792}
   m_Layer: 0
   m_Name: RoundedCornerQuad 2
   m_TagString: Untagged
@@ -115,6 +116,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2440457489429518792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078647020975296913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.49999997, z: 0.5}
+  m_Center: {x: 0.00000047683716, y: -0.000000059604645, z: 0}
 --- !u!1 &2979136802016212617
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +140,7 @@ GameObject:
   - component: {fileID: 3746512137561162794}
   - component: {fileID: 1272683729979438187}
   - component: {fileID: 3983556259788581251}
+  - component: {fileID: 7090593929786949561}
   m_Layer: 0
   m_Name: RoundedCornerQuad 5
   m_TagString: Untagged
@@ -194,6 +209,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7090593929786949561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979136802016212617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: -0.00000023841858, y: 0, z: -0.0000009536743}
 --- !u!1 &3749305850332310679
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +643,7 @@ GameObject:
   - component: {fileID: 6610062301054767685}
   - component: {fileID: 6118852951855687825}
   - component: {fileID: 4860948526177655602}
+  - component: {fileID: 441395337580839597}
   m_Layer: 0
   m_Name: RoundedCornerQuad 4
   m_TagString: Untagged
@@ -696,6 +725,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5000002}
   m_Center: {x: 0.00000020861626, y: 0, z: 0.00000035762787}
+--- !u!65 &441395337580839597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860948526177655613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5982870157119272001
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +828,7 @@ GameObject:
   - component: {fileID: 2342482351747492338}
   - component: {fileID: 1175493871357345897}
   - component: {fileID: 3446229007892863841}
+  - component: {fileID: 988546813250816519}
   m_Layer: 0
   m_Name: RoundedCornerQuad 1
   m_TagString: Untagged
@@ -854,6 +897,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &988546813250816519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5998533728228345728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000001, y: 0.49999997, z: 0.5000003}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0}
 --- !u!1 &6363696646597673970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1066,7 @@ GameObject:
   - component: {fileID: 9026583957768837534}
   - component: {fileID: 7858604070121805024}
   - component: {fileID: 6151474551203013935}
+  - component: {fileID: 643765194859308754}
   m_Layer: 0
   m_Name: RoundedCornerQuad 6
   m_TagString: Untagged
@@ -1078,6 +1135,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &643765194859308754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7640421860390810854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000001, y: 0.5, z: 0.5000001}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0.0000009536743}
 --- !u!1 &7761195388082813169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,8 +1213,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.41320926, y: 0.58, z: 0.78}
-  m_Center: {x: 0.11839536, y: 0, z: 0}
+  m_Size: {x: 1.0646949, y: 0.7669125, z: 0.8422678}
+  m_Center: {x: 0.23254132, y: -0.05902502, z: 0.0053754747}
 --- !u!114 &7761195388082813174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,6 +1340,7 @@ GameObject:
   - component: {fileID: 9126447064040304289}
   - component: {fileID: 1554416829115952987}
   - component: {fileID: 8934007517387981851}
+  - component: {fileID: 6856278760326915109}
   m_Layer: 0
   m_Name: RoundedCornerQuad 3
   m_TagString: Untagged
@@ -1351,6 +1422,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.50000024, y: 0.5, z: 0.5000001}
   m_Center: {x: -0.000000029802322, y: 0, z: -0.00000071525574}
+--- !u!65 &6856278760326915109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934007517387981850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50000024, y: 0.5, z: 0.5000001}
+  m_Center: {x: -0.00000047683716, y: 0, z: -0.0000009536743}
 --- !u!1001 &4844134141931294740
 PrefabInstance:
   m_ObjectHideFlags: 0

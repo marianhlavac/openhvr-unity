@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 2
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -610,7 +610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -533.2, y: 554.80005}
+  m_AnchoredPosition: {x: -533, y: 166}
   m_SizeDelta: {x: 263.3982, y: 41.3313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251592283
@@ -1160,7 +1160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524, y: 603.1}
+  m_AnchoredPosition: {x: -523.8, y: 214.29993}
   m_SizeDelta: {x: 281.79306, y: 33.44696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831481590
@@ -1436,7 +1436,7 @@ MonoBehaviour:
   dynamicEffect: {fileID: 1563618878}
   music: {fileID: 289405904}
   userHand: {fileID: 475865528}
-  resultsOutputDirectory: C:\Users\Marian\Desktop\
+  resultsOutputDirectory: C:\Users\user\Desktop\
   subjectName: {fileID: 126858203}
 --- !u!1 &1172163150
 GameObject:
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 60
   effectType: 2
-  range: 1
+  range: 0.01
   directional: 0
   playOnAwake: 0
 --- !u!4 &1563618879
