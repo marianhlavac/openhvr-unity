@@ -5258,7 +5258,7 @@ GameObject:
   m_Layer: 0
   m_Name: WindEffect
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 8bc6d2b1e98a74f74a731d570207e289, type: 3}
+  m_Icon: {fileID: 2800000, guid: 9371c61ee7a744b0aa4f15f4520aa01a, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5672,15 +5672,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aa8b4f7f38b33b4fbb122622cc91a6a, type: 3}
---- !u!1 &1419043876382715727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9aa8b4f7f38b33b4fbb122622cc91a6a,
-    type: 3}
-  m_PrefabInstance: {fileID: 6958230703753623110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2732045859472203100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9aa8b4f7f38b33b4fbb122622cc91a6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6958230703753623110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419043876382715727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9aa8b4f7f38b33b4fbb122622cc91a6a,
     type: 3}
   m_PrefabInstance: {fileID: 6958230703753623110}
   m_PrefabAsset: {fileID: 0}

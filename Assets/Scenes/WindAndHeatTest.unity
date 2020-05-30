@@ -2460,7 +2460,7 @@ GameObject:
   m_Layer: 0
   m_Name: OpenHVRManager
   m_TagString: OpenHVR
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: e67ac425f44bc405ebfe0431e401f6f9, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -7957,6 +7957,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1093430135}
     m_Modifications:
+    - target: {fileID: 6363696646597673970, guid: a391dbe76c3574644863937d8f8c7003,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: 54e1d55afdb084648b17a52dd4543ac6, type: 3}
     - target: {fileID: 6768373460638206690, guid: a391dbe76c3574644863937d8f8c7003,
         type: 3}
       propertyPath: m_LocalPosition.x
